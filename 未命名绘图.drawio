@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-20T13:31:06.748Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Ch_Q_PeKiKDfjHAN0utA" version="21.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-21T00:45:07.004Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="n2oaP_ewaowy76lDpf7R" version="21.2.2" type="github">
   <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
     <mxGraphModel dx="1434" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -96,6 +96,54 @@
         </mxCell>
         <mxCell id="naNa9cX4PWFADqVANJjT-36" value="由于删除Redis后Redis中并没有数据，因此这里的箭头代表更新Redis数据（在Redis中发现没有数据后去MySQL拉取最新数据）" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="790" y="700" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-37" value="更新MySQL" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#dae8fc;sketch=1;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-38" value="删除Redis" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#f8cecc;sketch=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-39" value="事务B" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-40" value="更新MySQL" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#dae8fc;sketch=1;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-41" value="删除Redis" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#f8cecc;sketch=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="220" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-42" value="事务A" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-43" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1170" as="sourcePoint" />
+            <mxPoint x="780" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-44" value="MySQL：初始值&lt;br&gt;Redis：初始值" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1150" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-45" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="1480" as="sourcePoint" />
+            <mxPoint x="790" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-46" value="MySQL：B&lt;br&gt;Redis：B" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="805" y="1460" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-47" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="1590" as="sourcePoint" />
+            <mxPoint x="790" y="1590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-48" value="MySQL：A&lt;br&gt;Redis：B" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="805" y="1570" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="naNa9cX4PWFADqVANJjT-49" value="由于删除Redis后Redis中并没有数据，因此这里的箭头代表更新Redis数据（在Redis中发现没有数据后去MySQL拉取最新数据）" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1250" width="140" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
